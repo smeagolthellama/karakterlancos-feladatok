@@ -19,6 +19,16 @@ int main()
     for(i=0;i<n;i++){
         cin>>c[i];
     }
-
+	int x=0,a=1;
+	for(i=0;i<n;i++){
+		a=1;
+		for(int j=0;j<strlen(c[i]);j++){
+			if(!isvowel(c[i][j])){
+				a=0;
+			}
+		}
+        x+=a;
+	}
+	cout<<x;
     return 0;
 }
