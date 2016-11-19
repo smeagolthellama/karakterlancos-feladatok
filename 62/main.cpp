@@ -14,7 +14,16 @@ int main()
 {
 	char t[CHAR_STAR_SIZE];
 	cin.getline(t,CHAR_STAR_SIZE);
-	bool v[26]={false};
-
+	int i;
+	bool v[26];
+	for(i=0;i<26;i++){
+		v[i]=true;
+	}
+	for(i=0;i<strlen(t);i++){
+		if(kozott(t[i],'a','z')&&v[t[i]-'a']){
+			cout<<t[i]<<' ';
+			v[t[i]-'a']=false;
+		}
+	}
     return 0;
 }
