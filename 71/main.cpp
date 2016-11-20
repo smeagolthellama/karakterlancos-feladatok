@@ -19,9 +19,15 @@ int main()
 	char word[20];
 	cin.getline(word,20);
 	char repword[20];
-	for(i=0;i<srtlen(word);i++){
-
+	for(i=0;i<strlen(word);i++){
+		repword[i]='*';
 	}
+	repword[strlen(word)]=0;
+    while((j=keres(t,word))!=-1){
+        torles(t,j,strlen(word));
+        beszur(t,repword,j);
+    }
+    cout<<t<<endl;
 
     return 0;
 }
